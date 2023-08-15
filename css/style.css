@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Montserrat:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin: 0 20px;
+    color: #4B4234;
+    margin-top: 15px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+    font-family: 'Assistant', sans-serif;
+}
+
+nav img{
+    margin-top: 15px;
+    height: 7vh;
+}
+
+.header-content{
+    max-width: 100vh;
+    padding: 28vh;
+    margin-left: 95vh;
+    text-align: center;
+   
+}
+
+.fundo{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/fundo.jpg");
+    position: relative;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: center;
+    margin-top: 0px;
+}
+
+.header-content h1{
+    margin-bottom: 10px;
+    font-size: 3.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: #4B4234;
+}
+
+.header-content p{
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #4B4234;
+}
+
+.bt{
+    border-color: #4B4234;
+    font-size: 1rem;
+    padding: 4px 15px;
+    border-width: thin;
+    border-radius: 15px;
+}
+
+.bt a, a:link, a:hover, a:visited{
+    text-decoration: none;
+    background: none;
+    color: #4B4234;
+}
+
+footer{
+    width: 100%;
+    margin-top: -20px;
+    height: 20vh;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0eced;
+    text-align: center;
+}
+
+/*Index*/
+
+/*A seta dos boas vindas*/
+.seta a{
+	text-align: center;
+	color: black;
+  margin-top: 10%;
+	float: none;
+	display: block;
+	animation: seta 1s ease alternate infinite;
+}
+
+@keyframes seta {
+	to {
+		transform: translateY(10px);
+	}
+}
+
+.botao:hover,
+  #filter-btn-box #demo button:hover {
+
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    background-color: #4B4234;
+    color: #4B4234;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  #demo .carousel-inner,
+  #demo .carousel-item {
+    height: 74vh;
+  }
+
+  .carousel-control-next {
+
+    margin-right: 20vh;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20vh;
+  }
+
+  #demo .carousel-caption {
+    top: 10%;
+    bottom: 10%;
+
+  }
+
+  #demo button {
+    color: black;
+  }
+
+  .carousel-caption {
+    height: 65vh;
+    background-color: #DAB599;
+    border-radius: 3px;
+  }
+
+  #demo .botao {
+    font: 1.2rem 'Montserrat', 'Black 900';
+    margin: 8px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #CBCAC8;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    outline: 0;
+    cursor: pointer;
+    height: 43px;
+    width: 250px;
+    text-align: center;
+  }
+
+  .carrossel {
+    background-color: #F2EBEC;
+    height: 100vh;
+  }
+
+  .cartao1,
+  .cartao2 {
+    width: 50vh;
+    height: 60vh;
+    background-color: #F6D7C4;
+    margin-left: 13vh;
+    border-radius: 3px;
+  }
+
+  .cartao1 img,
+  .cartao2 img {
+    width: 40vh;
+    height: 38vh;
+    align-items: center;
+    text-align: center;
+    margin: 20px 30px 10px 30px;
+    border-radius: 3px;
+  }
+
+  .cartao2 {
+    margin-left: 5vh;
+  }
+
+  .textcat {
+    color: #30150E;
+    margin: 20px 30px;
+    padding: 0px 20px;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width:767px) {
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    ul {
+      display: block;
+      margin: 10px 30px 0px 30px;
+      padding: 0px;
+    }
+
+    li {
+      margin: 0px;
+      margin-top: 10px;
+      background-color: #EDE4DD;
+      border: 2px solid white;
+      border-radius: 20px;
+    }
+
+    nav {
+      text-align: center;
+      display: block;
+      margin: 0px;
+      font-size: 1.1rem;
+    }
+
+    nav li a {
+      display: block;
+      text-align: center;
+      padding: 5px 0px;
+    }
+
+    nav img {
+      height: 8vh;
+    }
+
+    .header-content {
+      width: auto;
+      padding: 40px;
+      margin-left: 0px;
+      margin: 0px;
+    }
+
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .header-content p {
+      line-height: 35px;
+      font-size: 1.1rem;
+    }
+
+    .bt {
+      border-color: #4B4234;
+      font-size: 0.8rem;
+      padding: 4px 15px;
+      border-width: thin;
+      border-radius: 15px;
+    }
+
+    .seta svg {
+      width: 40px;
+    }
+
+    .fundo {
+      background-size: cover;
+      background-position: 24%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      height: auto;
+      font-size: 0.8rem;
+      padding: 50px 0px;
+    }
+
+    footer p {
+      margin: 0px;
+      line-height: 30px;
+    }
+
+    .textcat {
+      margin: 10px auto;
+      padding: 0px;
+      text-align: left;
+    }
+
+    .textcat p {
+      font-size: 1rem;
+      margin: 0px;
+      padding: 10px 25px;
+    }
+
+    .cartao1 img,
+    .cartao2 img {
+      max-width: 75%;
+      height: auto;
+      margin: 0px;
+      border-radius: 3px;
+    }
+
+    #demo .carousel-caption {
+      top: 0%;
+      bottom: 0%;
+    }
+
+    .carousel-caption {
+      width: 100%;
+      margin: 0px;
+      padding: 40px 50px 40px 60px;
+      margin-left: -80px;
+    }
+
+    #demo .carousel-inner,
+    #demo .carousel-item {
+      background-color: #30150E;
+      width: 100%;
+      height: 60vh;
+    }
+
+    .carrossel {
+      height: 80vh;
+      padding: 70px 0px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      margin: 0px;
+    }
+
+    .cartao1,
+    .cartao2 {
+      width: 95%;
+      height: 400px;
+      margin: 0px;
+      padding: 25px 0px;
+    }
+
+    .teste1,
+    .teste2 {
+      width: 50%;
+      margin: 0px;
+    }
+
+    .teste1 {
+      padding: 0px 0px 0px 0px;
+    }
+
+    .teste2 {
+      padding: 0px;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
