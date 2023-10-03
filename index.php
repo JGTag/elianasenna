@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    
 </head>
 
 <body>
@@ -63,7 +63,7 @@
             <div class="segunda">
                 <h5><b>CONTATO:</b></h5>
                 <p>
-                    <a href=""><i data-feather="instagram"></i> @Eliana_senna</a><br>
+                    <a href="https://www.instagram.com/elianasenna_/"><i data-feather="instagram"></i> @elianasenna_</a><br>
                     <i data-feather="phone"></i> (11) 96589-9216
                 </p>
             </div>

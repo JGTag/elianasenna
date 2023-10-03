@@ -5,15 +5,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
   <div class="fundo row">
     <div class="col fat">
-      <img src="img/fatia.png">
+    <img src="img/fatia.png">
     </div>
-
-    <div class="col header-content">
+    
+      <div class="col header-content">
       <h1>Seja bem vindo</h1>
-      <p>Aqui você encontrará uma variedade encantadora de bolos e doces feitos com amor e dedicação pela confeiteira Eliana Senna. Sinta-se em casa e desfrute das doçuras que oferecemos com todo carinho para você!</p>
+      <p>Aqui você encontrará uma variedade encantadora de bolos e doces feitos com amor e dedicação pela confeiteira Eliana Senna. Sinta-se em casa e desfrute das doçuras que oferecemos com todo carinho para você!
+</p>
+     
 
       <div class="seta">
         <a href="#cont">
@@ -23,9 +27,10 @@
         </a>
       </div>
 
-
+    
     </div>
   </div>
+
 
   <div id="cont" class="carrossel">
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -39,12 +44,13 @@
 
           <div class="carousel-caption d-md-block">
 
+
             <div class="row g-0">
               <div class="col teste1">
                 <div class="cartao1">
                   <div><img src="img/bolo7.jpg"></div>
-
-
+                
+                 
                   <div class="textcat">
                     <p>Visite nosso instagram para mais contéudos interativos!</p>
                   </div>
@@ -111,19 +117,25 @@
                   <div class="textcat">
                     <p>E os famosos bolos de pote, o idel para comer na viagem.</p>
                   </div>
+
                 </div>
+
               </div>
             </div>
+
+
           </div>
+
+
         </div>
       </div>
-
       <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
+
 
     </div>
   </div>
