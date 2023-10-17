@@ -1,78 +1,56 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliana Senna - Bolos & Doces</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-</head>
+/**
+ * index.php
+ * @package ZaitTinyFrameworkPHP
+ * @author  Msc Cleber Silva de Oliveira, Yossef Zait
+ * @version 0.0.0.1
+ * @see     https://cleberoliveira.info
+ */
 
-<body>
+use core\utils\Router;
 
-    <header class="menuprincipal">
-        <nav>
-            <a href="index.php"><img src="img/Logo.png" alt="logo do site escrito 'Eliana Senna - Bolos & Doces'"></a>
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+// Diretório raiz da aplicação
+$rootPath = __DIR__; // Diretório Raiz  
+// Arquivo de Configuraões 
+$config = array();  // é necessário global pra usar $config em '/app/etc/config.php'
 
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+require_once $rootPath . '/app/etc/config.php';
+require_once $rootPath . '/autoload.php'; // Arquivo do Autoloader de classes
 
-            <ul class="nav-list">
-                <li><a data="inicial.php" class="aLink" href="#">HOME</a></li>
-                <div class="linha-horizontal"></div>
-                <li><a data="catalogo.php" class="aLink" href="#">CATÁLOGO</a></li>
-                <div class="linha-horizontal"></div>
-                <li><a data="sobre.php" class="aLink" href="#">SOBRE</a></li>
-                <div class="linha-horizontal"></div>
-                <li><a data="contato.php" class="aLink" href="#">CONTATO</a></li>
-                <div class="linha-horizontal"></div>
-                <li><a data="entrar.php" class="aLink" href="#">ENTRAR</a></li>
-                <div class="linha-horizontal"></div>
-            </ul>
-        </nav>
-    </header>
+$router = new Router();
+// se uri estiver vazia considera chamar a rota de home
 
-    <section id="inicial">
+$module = ( ( $_GET["uri"] == "") || str_starts_with($_GET["uri"] ,"index.php" ) || ! isset($_GET["uri"]) ? "home" : $_GET["uri"] );
 
-    </section>
+$router->dispatch( $module );
 
-
-    <footer id="contato">
-        <div class="footer-lhorizontal"></div>
-        <img src="img/Logo.png" class="img-fluid"><br>
-        <div class="organizando">
-            <div class="primeira">
-                <h5><b>HORÁRIO DE FUNCIONAMENTO:</b></h5>
-                <p>
-                    <b>Segunda a Sexta</b> - 13:00 às 21:00 <br>
-                    <b>Sábados</b> - 09:00 às 21:00 <br>
-                    <b>Domingos e feriados</b> - 13:30 às 21:00 <br>
-                </p>
-            </div>
-
-            <div class="segunda">
-                <h5><b>CONTATO:</b></h5>
-                <p>
-                    <a href="https://www.instagram.com/elianasenna_/"><i data-feather="instagram"></i> @elianasenna_</a><br>
-                    <i data-feather="phone"></i> (11) 96589-9216
-                </p>
-            </div>
-        </div>
-        <p>&copy Copyright 2023 - Todos os direitos reservados - Eliana Senna: Bolos & Doces </p>
-        <p><img src="img/jgtag.png" id="empresa" class="img-fluid"> Desenvolvido por JGTag</p>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-
-</html>
+/**
+* Este é o script principal de inicialização para a aplicação.
+ * Ele define algumas variáveis úteis, lida com a configuração,
+ * realiza o autoload de classes e inicia a roteamento da aplicação.
+ *
+ * As seguintes operações são realizadas, em ordem:
+ *
+ * 1. Importa a classe Router do namespace core.
+ * 2. Define $rootPath como o diretório atual, que será usado posteriormente para resolver caminhos na aplicação.
+ * 3. Define $folderBase como o caminho relativo entre o diretório raiz do servidor e o diretório atual.
+ * 4. Inclui o arquivo de configuração principal, o autoloader de classes, e a classe Router.
+ * 5. Se a sessão PHP ainda não foi iniciada, inicia uma.
+ * 6. Define $routersFile como o caminho para o arquivo json que contém as rotas da aplicação.
+ * 7. Cria uma nova instância da classe Router, passando o arquivo de rotas como argumento.
+ * 8. Chama o método dispatch() na instância do Router para iniciar a roteamento da aplicação.
+ *
+ * Requisitos:
+ * - PHP 7.4 ou superior e Mysql 8.1 ou superior; 
+ * - A extensão json do PHP deve estar habilitada.
+ * - O arquivo app/etc/config.php deve existir e ser válido.
+ * - O autoloader em autoload.php deve estar funcionando corretamente.
+ * - A classe Router deve estar definida em core/Router.class.php e ser carregável pelo autoloader.
+ * - O arquivo de rotas em app/etc/routes.json deve existir e ser um JSON válido.
+ * 
+ */
+?>

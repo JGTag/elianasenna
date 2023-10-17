@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   feather.replace()
   
   $(document).ready(function() {
-      $('#inicial').load("inicial.php");
+      $('#inicial').load("inicial");
   
   
       $(".aLink").click(function(event) {

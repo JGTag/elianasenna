@@ -15,8 +15,6 @@ body {
   background: #F0EEF1;
 }
 
-
-
 /* NAVBAR*/
 
 nav {
@@ -106,6 +104,7 @@ section {
   padding: 20px;
   z-index: 5;
   transition: 0.5s;
+  margin:0px;
 }
 
 .menuprincipal.sticky {
@@ -131,31 +130,41 @@ section {
 
 /*header inicial*/
 
+
+.bemvindo {
+  align-items: justify;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
 .centralizacao {
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 .header-content {
-  width: auto;
-  padding: 2rem;
-  margin-right: 20%;
+  max-width: 100vh;
+  padding: 5vh;
+  margin-right: 15%;
   margin-top: 13%;
   text-align: center;
   align-items: center;
+
   height: 60vh;
+
 }
 
 .fat img {
   height: 30vh;
   margin-top: 35%;
-  margin-left: 65%;
+  margin-left: 70%;
 
 }
 
 .fundo {
   width: 100%;
   height: 100vh;
-  background: url("../img/fundo.png");
+  background: url("../images/fundo.png");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,6 +322,7 @@ a:visited {
   margin: 20px 30px 10px 30px;
   border-radius: 3px;
 }
+
 
 .cartao2 {
   margin-left: 5vh;
@@ -478,7 +488,7 @@ footer h5 {
 /*AREA PRODUTO*/
 .conteiner-produto {
   width: 100%;
-  padding: 60px 0px;
+  padding: 40px 0px;
 }
 
 .prod-conteiner {
@@ -596,139 +606,163 @@ h3 {
   background: #000;
 }
 
+/*Gerenciamento*/
 
-@media screen and (max-width:767px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .header-content {
-    width: 100vh;
-    margin: 0px;
-
-
-  }
-
-  
-
-  .header-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-content p {
-    margin-left: -35px;
-    padding: 5px 20px;
-    height: 20vh;
-    width: 100vw;
-    font-size: 1.2rem;
-    text-align: center;
-
-  }
-
-  .bt {
-    border-color: #4B4234;
-    font-size: 0.8rem;
-    padding: 4px 15px;
-    border-width: thin;
-    border-radius: 15px;
-  }
-
-  .seta svg {
-    width: 40px;
-  }
-
-  .fundo {
-    background-size: cover;
-    background-position: 90%;
-    justify-content: center;
-    height: 100vh;
-
-
-  }
-
-  .fundo img {
-    background: none;
-    display: none;
-  }
-
-  .fat img {
-    display: none;
-    width: 1vw;
-    height: 1vh;
-
-  }
-
-  .textcat {
-    margin: 10px auto;
-    padding: 0px;
-
-
-  }
-
-  .textcat p {
-    font-size: 1rem;
-    margin: 0px;
-    padding: 10px 25px;
-  }
-
-  .cartao1 img,
-  .cartao2 img {
-
-    max-width: 100%;
-    height: auto;
-    margin: 0px;
-    border-radius: 3px;
-    padding: 5px;
-  }
-
-  #demo .carousel-caption {
-    top: 0%;
-    bottom: 0%;
-  }
-
-  .carousel-caption {
-
-    width: 100%;
-    height: 110vh;
-    padding: 40px 50px 40px 60px;
-    margin-left: -70px;
-  }
-
-
-  #demo .carousel-inner,
-  #demo .carousel-item {
-    width: 100%;
-    height: 110vh;
-
-  }
-
-
-  .carrossel {
-    padding-top: 20%;
-    height: 120vh;
-    display: block;
-  }
-
-  .carousel-control-next,
-  .carousel-control-prev {
-    margin: 0px;
-
-  }
-
-  .cartao1,
-  .cartao2 {
-
-    width: 30vh;
-    height: auto;
-    margin: 7% 10%;
-    padding: 10px 0px;
-  }
-
-
-
-
-
+.form-gerenciamento {
+  display: flex;
+  align-items: justify;
+  padding: 10%;
+  height: 100vh;
 }
+
+
+.form-link {
+  margin: 10px;
+  width: 20vw;
+  height: auto;
+  background-color: #a8a8a8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  align-self: center;
+}
+
+.form-link h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 10%;
+}
+
+.form-link a {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #CBCAC8;
+}
+
+.form-link p {
+  margin-top: 5%;
+}
+
+/*FORMULÁRIOS - BANCO DE DADOS*/
+
+.container-formulario {
+  padding: 12%;
+  height: 100vh;
+}
+
+.formulario {
+  width: 40vh;
+  height: auto;
+  background-color: #a8a8a8;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.formulario h1 {
+  text-align: center;
+}
+
+
+form label {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.botao-form {
+  padding: 5px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/*AREALOGIN*/
+
+.arealogin {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 4rem 2rem;
+  margin-bottom: 4rem;
+}
+
+.arealogin h2 {
+  color: #A64141;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.login-item {
+  width: 40%;
+  padding: 30px;
+}
+
+.arealogin form label,
+.arealogin form input,
+.arealogin form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  cursor: context-menu;
+}
+
+.arealogin form input {
+  font: inherit;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color, box-shadow 0.2s;
+}
+
+.arealogin form input:hover,
+.arealogin form input:focus {
+  outline: none;
+  border-color: #733B27;
+  box-shadow: 0 0 0 1px #A64141;
+}
+
+.arealogin form button {
+  padding: 0.6rem;
+  color: #f2f2f2;
+  font: inherit;
+  border: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.arealogin form button,
+.arealogin form button:hover,
+.arealogin form button:focus {
+  background-color: #A64141;
+}
+
+.arealogin form button:hover,
+.arealogin form button:focus {
+  outline: none;
+  opacity: 0.8;
+}
+
+#lembras input {
+  width: 20px;
+}
+
+#lembras {
+  margin-left: 5px;
+}
+
+.login-item p {
+  font-size: 1rem;
+}
+
+.login-item img {
+  width: 30%;
+  display: block;
+  margin: 0.3rem auto;
+}
+
 
 @media (max-width: 999px) {
   body {
@@ -854,137 +888,23 @@ h3 {
 }
 
 
-/*Gerenciamento*/
-
-.form-gerenciamento {
-  display: flex;
-  align-items: justify;
-  padding: 10%;
-  height: 100vh;
-}
-
-
-.form-link {
-  margin: 10px;
-  width: 20vw;
-  height: auto;
-  background-color: #a8a8a8;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  align-self: center;
-}
-
-.form-link h1 {
-  text-align: center;
-  font-size: 2rem;
-  font-style: italic;
-  margin-bottom: 10%;
-}
-
-.form-link a {
-  font-size: 1.2rem;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #CBCAC8;
-}
-
-.form-link p {
-  margin-top: 5%;
-}
-
-
-
-
-@media screen and (max-width:767px) {
-
-  .form-gerenciamento {
-    display: flex;
-    width: 100vw;
-    padding-top: 30%;
-    margin: 10px 0px;
-    height: 170vh;
-
-  }
-
-  .form-link {
-    font-size: 1rem;
-    width: 90%;
-    height: 35vh;
-    margin: 10%;
-  }
-
-  .form-link a {
-    text-align: center;
-    align-self: center;
-  }
-
-  .form-link h1 {
-    text-align: center;
-  }
-
-  .form-link p {
-
-    text-align: justify;
-    padding: 5%;
-  }
-
-}
-
-/*FORMULÁRIOS - BANCO DE DADOS*/
-
-.container-formulario {
-  display: block;
-  padding: 8%;
-  height: 100vh;
-  width: 100%;
-}
-
-.formulario {
-  width: 100vw;
-  height: auto;
-  background-color: #a8a8a8;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px;
-}
-
-.formulario h1 {
-  text-align: center;
-}
-
-
-form label {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-.botao-form {
-  padding: 5px;
-  border: none;
-  margin-top: 10px;
-  border-radius: 10px;
-}
-
-
 @media screen and (max-width:767px) {
 
   .container-formulario {
-
+    display: block;
     width: 100%;
-    padding: 30% 0%;
+    padding: 100px 0px;
     background-position: 60%;
     height: auto;
-    margin: 10%;
   }
 
-
   .formulario {
-
+    display: block;
     font-size: 1rem;
-    width: 100%;
-    height: auto;
-    margin: 5% 15%;
+    width: auto;
+    height: 50vh;
+    padding: 35px;
+    margin: 0px;
   }
 
   .formulario h1 {
@@ -1005,6 +925,147 @@ form label {
     text-align: center;
   }
 
+  .form-gerenciamento {
+    display: flex;
+    width: 100vw;
+    padding-top: 30%;
+    margin: 10px 0px;
+    height: 170vh;
+  }
 
+  .form-link {
+    font-size: 1rem;
+    width: 90%;
+    height: 35vh;
+    margin: 10%;
+  }
+
+  .form-link a {
+    text-align: center;
+    align-self: center;
+  }
+
+  .form-link h1 {
+    text-align: center;
+  }
+
+  .form-link p {
+    text-align: justify;
+    padding: 5%;
+  }
+  
+  .header-content {
+    width: 100vh;
+    margin: 0px;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content p {
+    margin: 10px;
+    padding: 10px;
+    height: 20vh;
+    width: 90vw;
+    font-size: 1.2rem;
+  }
+
+  .bt {
+    border-color: #4B4234;
+    font-size: 0.8rem;
+    padding: 4px 15px;
+    border-width: thin;
+    border-radius: 15px;
+  }
+
+  .seta svg {
+    width: 40px;
+  }
+
+  .fundo {
+    background-size: cover;
+    background-position: 90%;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .fundo img {
+    background: none;
+    display: none;
+  }
+
+  .fat img {
+    display: none;
+    width: 1vw;
+    height: 1vh;
+
+  }
+
+  .textcat {
+    margin: 10px auto;
+    padding: 0px;
+
+
+  }
+
+  .textcat p {
+    font-size: 1rem;
+    margin: 0px;
+    padding: 10px 25px;
+  }
+
+  .cartao1 img,
+  .cartao2 img {
+
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border-radius: 3px;
+    padding: 5px;
+  }
+
+  #demo .carousel-caption {
+    top: 0%;
+    bottom: 0%;
+  }
+
+  .carousel-caption {
+
+    width: 100%;
+    height: 110vh;
+    padding: 40px 50px 40px 60px;
+    margin-left: -70px;
+  }
+
+
+  #demo .carousel-inner,
+  #demo .carousel-item {
+    width: 100%;
+    height: 110vh;
+
+  }
+
+
+  .carrossel {
+    padding-top: 20%;
+    height: 120vh;
+    display: block;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin: 0px;
+
+  }
+
+  .cartao1,
+  .cartao2 {
+
+    width: 30vh;
+    height: auto;
+    margin: 7% 10%;
+    padding: 10px 0px;
+  }
 
 }
