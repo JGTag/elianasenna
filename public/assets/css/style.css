@@ -88,6 +88,10 @@ nav img {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
+
+
+
+
 section {
   margin: 0px;
   padding: 0px;
@@ -608,41 +612,37 @@ h3 {
 
 /*Gerenciamento*/
 
-.form-gerenciamento {
-  display: flex;
-  align-items: justify;
-  padding: 10%;
+/*FORMULÁRIOS - BANCO DE DADOS*/
+
+.container-formulario {
+  padding: 12%;
   height: 100vh;
 }
 
-
-.form-link {
-  margin: 10px;
-  width: 20vw;
+.formulario {
+  width: 40vh;
   height: auto;
   background-color: #a8a8a8;
   padding: 20px;
   border-radius: 8px;
-  text-align: center;
-  align-self: center;
+  margin: 20px;
 }
 
-.form-link h1 {
+.formulario h1 {
   text-align: center;
-  font-size: 2rem;
-  font-style: italic;
-  margin-bottom: 10%;
 }
 
-.form-link a {
+
+form label {
   font-size: 1.2rem;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #CBCAC8;
+  font-style: italic;
 }
 
-.form-link p {
-  margin-top: 5%;
+.botao-form {
+  padding: 5px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 /*FORMULÁRIOS - BANCO DE DADOS*/
@@ -1069,3 +1069,110 @@ form label {
   }
 
 }
+
+/*PÁGINA SOBRE*/
+
+.history {
+  background-color: #f2f2f2;
+  width: 60vh;
+  height: 60vh;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.history p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.sessao-sobre {
+  background-color: #CB4D4D;
+  border-radius: 5px;
+  width: 90vw;
+  margin: 7% 5% ;
+  height: 80vh;
+  padding: 3%;
+ 
+
+}
+
+.history img {
+  width: 50vh;
+  height: 50vh;
+  margin: 50px 50px 0px 50px;
+  border-radius: 5px;
+}
+
+.objetivos {
+  font-size: 1.3rem;
+  width: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.objetivos ul {
+  display: block;
+  list-style: none;
+}
+
+.objetivos li{
+ margin-top: 6%;
+ color: #f0f0f0;
+ text-align: justify;
+}
+
+@media screen and (max-width:767px) {
+
+  .sessao-sobre {
+      width: auto;
+      margin: 120px 10px 0px 10px;
+      height: auto;
+  }
+
+
+  .history {
+      width: auto;
+      height: auto;
+      margin: 0px;
+      padding: 50px 30px;
+      border-radius: 10px;
+      text-align: center;
+  }
+
+  .history img {
+      width: 80%;
+      height: 80%;
+      margin: 0px;
+  }
+
+  .history p {
+      font-size: 1rem;
+      margin: 0px;
+      margin-top: 5px;
+  }
+
+  .objetivos {
+      font-size: 1rem;
+      width: 100%;
+      top: 0%;
+      left: 0%;
+      margin: 0px;
+      transform: none;
+      position: inherit;
+  }
+
+  .objetivos ul {
+      padding: 10%;
+      list-style: inside square;
+  }
+
+}
+
+/*FIM DA PÁGINA SOBRE*/

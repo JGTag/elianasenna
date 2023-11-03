@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="public/assets/js/scripts.js"></script>
+   
 </head>
 <script>
 
@@ -21,7 +21,7 @@
 
     <header class="menuprincipal">
         <nav>
-            <a href="home.php"><img src="public/assets/images/Logo.png" alt="logo do site escrito 'Eliana Senna - Bolos & Doces'"></a>
+            <a href="home"><img src="public/assets/images/Logo.png" alt="logo do site escrito 'Eliana Senna - Bolos & Doces'"></a>
 
             <div class="mobile-menu">
                 <div class="line1"></div>
@@ -34,12 +34,14 @@
                 <div class="linha-horizontal"></div>
                 <li><a data="catalogo" class="aLink" href="#">CATÁLOGO</a></li>
                 <div class="linha-horizontal"></div>
-                <li><a href="#">SOBRE</a></li>
+                <li><a data="sobre" class="aLink" href="#">SOBRE</a></li>
                 <div class="linha-horizontal"></div>
                 <li><a href="#">CONTATO</a></li>
                 <div class="linha-horizontal"></div>
                 <li><a href="#">ENTRAR</a></li>
                 <div class="linha-horizontal"></div>
+                <!--<li><a data="gerenciamento" class="aLink" href="#">ADM</a></li>
+                <div class="linha-horizontal"></div>-->
              
             </ul>
         </nav>

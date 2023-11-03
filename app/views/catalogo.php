@@ -115,6 +115,7 @@ body{
                     <h4>Bolo simples, rosetas rosa</h4>
                     <p>Um bolo redondo de 3 kilos, serve em média 25 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                   
                 </div>
 
@@ -123,7 +124,7 @@ body{
                     <h4>Bolo simples, rosetas azul</h4>
                     <p>Um bolo redondo de 5 kilos, serve em média 33 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -131,7 +132,7 @@ body{
                     <h4>Bolo temático: Homem Aranha</h4>
                     <p>Um bolo redondo de 2 kilos, serve em média 20 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -139,7 +140,7 @@ body{
                     <h4>Bolo especial de aniversário: Flork</h4>
                     <p>Um bolo redondo de 2 kilos, serve em média 20 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -147,7 +148,7 @@ body{
                     <h4>Bolo de pote</h4>
                     <p>Bolo no pote de 300 ml, recheios variados [...]</p>
                     <h5>Preço: R$10,00 a unidade</h5>
-                  
+                    <!--<a data="bolodepote" class="aProd" id="bolodepote" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -155,7 +156,7 @@ body{
                     <h4>Bolo tematico: Roblox</h4>
                     <p>Um bolo redondo de 2,5 kilos, serve em média 20 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -163,7 +164,7 @@ body{
                     <h4>Bolo simples, rosa e branco</h4>
                     <p>Um bolo uadrado de 2 kilos, serve em média 22 pedaços [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -171,7 +172,7 @@ body{
                     <h4>Bolo temático: Tinker Bell</h4>
                     <p>Um bolo quadrado de 2 kilos, serve em média 20 pedaços [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
 
                 <div class="col cartao mx-3">
@@ -179,7 +180,7 @@ body{
                     <h4>Cone trufado</h4>
                     <p>Cone recheado de recheios variados [...]</p>
                     <h5>Preço: R$7,00 a unidade</h5>
-                   
+                    <!--<a data="cone" class="aProd" id="cone" href="#">VER PRODUTO</a>-->
                 </div>
                 
                 <div class="col cartao mx-3">
@@ -187,7 +188,7 @@ body{
                     <h4>Bolo temático: Lana Del Rey</h4>
                     <p>Um bolo quadrado de 5 kilos, serve em média 33 fatias [...]</p>
                     <h5>Preço: R$80,00 o kilo</h5>
-                 
+                    <!--<a data="bolodecorado" class="aProd" id="bolodecorado" href="#">VER PRODUTO</a>-->
                 </div>
             </div>
         </section>

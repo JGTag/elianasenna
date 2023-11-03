@@ -12,7 +12,7 @@
                 <img src="public/assets/images/bolo1.jpg" class="img-fluid">
             </article>
             <article class="prod-item3">
-                <h3><u>CONE</u></h3>
+                <h3><u>Bolo decorado</u></h3>
                 <p>A cobertura é um ganache de chocolate sedutor que cobre o bolo de forma generosa. Ele é feito com chocolate amargo e creme de leite.</p>
                 <p>
                     <b>Disponível no tamanho:</b><br>
