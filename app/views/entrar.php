@@ -1,100 +1,79 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script src="public/assets/js/scripts.js"></script>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JGTag - Login</title>
-  <link rel="stylesheet" href="public/assets/css/style.css">
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="icon" href="public/assets/images/logo.png">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-  <script>
-  
-   $("#lnkcadastrar").click(function(event){
-      event.preventDefault();
-      $('#inicial').load("cadastrar");
-        });
-      
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Links das bibliotecas, estão internas agora-->
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
 
+    <script src="public/assets/js/jquery.min.js"></script>
+    <script src="public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="public/assets/js/jquery.mask.js"></script>
+    <script src="public/assets/js/jquery.maskedinput.js"></script>
+    <script src="public/assets/js/scripts.js"></script>
 </head>
-<body>
+
+<body id="body" class="login">
   <main class="arealogin centralizacao">
-    <section class="login-item shadow rounded">
-      <h2>Entrar</h2>
-      <form>
-        <label for="email"></label>
-        <input type="email" id="email" placeholder="E-mail" name="email" onblur="validarEmail()" onfocus="redefinirMsg()">
-
-        <span id="error-email"></span>
-
-        <label for="pwd"></label>
-        <input type="password" id="pwd" placeholder="Senha" name="pwd">
-        <div class="form-check mb-3">
-          <label class="form-check-label" id="lembras"><input type="checkbox" class="form-check-input" name="remember">Remember-me</label>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section class="login-item shadow rounded">
-      <h2>Cadastre-se</h2>
-      <p>Faça o seu cadastro e favorite os produtos da confeitaria que mais te agradaram!!!</p>
-      <img src="public/assets/images/pagcad.png" class="img-fluid">
-      <form>
-        <button data="cadastrar" id="lnkcadastrar" type="button">Cadastrar</button>
-      </form>
-    </section>
+  <section class="login-item shadow rounded">
+    <h2>Você entrará como administrador</h2>
+    
+    <div>
+                    <form id="login-form">
+                        <div>
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="senha" class="form-label">Senha:</label>
+                            <input type="password" class="form-control" id="senha" name="senha" required>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn2 p-2 mt-3" onclick="login()">Entrar</button>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                    <button class="btn3 p-2"><a href="home" class="text-white">Voltar</a></button>
+                </div>
+                    </form>
+                </div>
+  </section>
   </main>
-</body>
 
-<script type="text/javascript">
-  function validarEmail() {
-    var email = document.querySelector('#email');
-    var error = document.querySelector('#error-email');
 
-    if (!email.checkValidity()) {
-      error.innerHTML = "E-mail inválido";
-    }
-  }
+    <script>
+        function login() {
+            var email = $("#email").val();
+            var senha = $("#senha").val();
 
-  function redefinirMsg() {
-    var error = document.querySelector('#error-email');
-    if (error.innerHTML == "E-mail inválido") {
-      error.innerHTML = "";
-    }
+            $.ajax({
+                type: "POST",
+                url: "usuario",
+                data: {
+                    action: "entrar",
+                    email: email,
+                    senha: senha
+                },
+                success: function(response) {
+                    window.location.href = "adm";
+                },
+                error: function(xhr, status, error) {
+                    console.error("Erro na solicitação AJAX:", error);
+                    console.log("Detalhes do erro:", xhr.responseText);
+                    displayErrorMessage("Erro na solicitação AJAX");
+                }
+            });
+        }
 
-    $(document).on('submit', '#ctt_form', function() {
-      $("input").val("");
-    });
-  }
-
-  $(document).ready(function() {
-    $("#ctt_form").submit(function(event) {
-      event.preventDefault();
-      alert("Login efetuado com sucesso!!");
-    });
-
-    $("input").keypress(function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        $(this).blur();
-      }
-    });
-  });
-</script>
-
-<script>
-  feather.replace()
-</script>
+        function displayErrorMessage(message) {
+            $("#error-message").text(message);
+        }
+    </script>
 </body>
 
 </html>
