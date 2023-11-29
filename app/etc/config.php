@@ -61,10 +61,10 @@ if ($showErrors){
     error_reporting(E_ALL);
 }
 
-$config['database']['host']		= 'localhost';
-$config['database']['schema']	= 'zaitTinyFramework';
-$config['database']['user']		= 'root';
-$config['database']['pass']		= 'senha';
+$config['database']['host']		= '144.217.39.54';
+$config['database']['schema']	= 'hostdeprojetos_sennaconfeitaria';
+$config['database']['user']		= 'hostdeprojetos';
+$config['database']['pass']		= 'ifspgru@2022';
 $config['database']['port']		= '3306';
 
 $config['email']['host']	    = 'smtp.mydomain.com';

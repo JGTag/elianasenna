@@ -1,7 +1,7 @@
 <?php
 
 namespace core\database;
-
+// @ignore 
 use core\utils\Sanitize;
 use Exception;
 use InvalidArgumentException;
@@ -137,13 +137,13 @@ class DBQuery {
     public function select() {
         $fields = implode(', ', $this->fieldsName);
         $sql = "SELECT {$fields} FROM {$this->tableName}";
-        return $this->conn->query($sql);
+        return ($this->conn->query($sql))->fetchAll(\PDO::FETCH_ASSOC);
     }
   
     public function selectWhere($where) {
         $fields = implode(', ', $this->fieldsName);
-        $sql = "SELECT {$fields} FROM {$this->tableName}" . (($where!="")?$where:"");
-        return $this->conn->query($sql);
+        $sql = "SELECT {$fields} FROM {$this->tableName}" . (($where!="")?$where->build():"");
+        return ($this->conn->query($sql))->fetchAll(\PDO::FETCH_ASSOC);
     }
     
     /**
@@ -162,7 +162,7 @@ class DBQuery {
             $sql .= " " . $outerJoin;
         }
         $sql .= $where->build();
-        return $this->conn->query($sql);
+        return ($this->conn->query($sql))->fetchAll(\PDO::FETCH_ASSOC);
     }
     
     /**
@@ -183,7 +183,7 @@ class DBQuery {
         $sql = "INSERT INTO {$this->tableName} (" . implode(', ', $this->fieldsName) . ")";
         $sql .= " VALUES ('" . implode("', '", $values) . "')";
         try {
-            return $this->conn->query($sql);
+            return ($this->conn->query($sql))->fetchAll(\PDO::FETCH_ASSOC);
         } catch ( PDOException $error) {
             if ($error->getCode() == 23000) {
                 throw new \Exception('Violação de chave única ou estrangeira.');

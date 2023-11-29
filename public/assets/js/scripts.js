@@ -1,27 +1,29 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-  
-  feather.replace()
-  
+
+/*home*/ 
   $(document).ready(function() {
       $('#inicial').load("inicial");
-  
-  
+
       $(".aLink").click(function(event) {
           event.preventDefault();
           $('#inicial').load($(event.target).attr("data"));
       });
   
+  });
+  
+/*home adm*/
+    $(document).ready(function() {
+      $('#gerenciamento').load("gerenciamento");
+  
+        $(".aLink").click(function(event) {
+          event.preventDefault();
+          $('#gerenciamento').load($(event.target).attr("data"));
+      });
   
   
   });
   
+  
+/* seta */ 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
           e.preventDefault();
@@ -32,10 +34,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 
-
-
-
-
+/*menu desce muda de cor*/
 $(function () {
   $(window).on("scroll", function () {
     if ($(window).scrollTop > 100) {
@@ -46,14 +45,6 @@ $(function () {
   })
 })
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
 
 window.addEventListener('scroll', function () {
   var menuprincipal = document.querySelector('.menuprincipal');
@@ -62,6 +53,7 @@ window.addEventListener('scroll', function () {
 
 
 
+/*menu responsivo*/
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -105,3 +97,6 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+/*input re-size*/
+

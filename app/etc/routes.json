@@ -5,6 +5,60 @@
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
 	},
+	"CtrlFeedback" : { 
+		"path" : "app/controllers/CtrlFeedback.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlMensagem" : { 
+		"path" : "app/controllers/CtrlMensagem.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlProduto" : { 
+		"path" : "app/controllers/CtrlProduto.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlUsuario" : { 
+		"path" : "app/controllers/CtrlUsuario.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlBolodecorado" : { 
+		"path" : "app/controllers/CtrlBolodecorado.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlCone" : { 
+		"path" : "app/controllers/CtrlCone.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlBolodepote" : { 
+		"path" : "app/controllers/CtrlBolodepote.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlPedido" : { 
+		"path" : "app/controllers/CtrlPedido.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"CtrlBrigadeiro" : { 
+		"path" : "app/controllers/CtrlBrigadeiro.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
 	"catalogo" : { 
 		"path" : "app/views/catalogo.php",
 		"sessionKey": [{"idUsuario": false}], 
@@ -41,14 +95,14 @@
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
 	},
-	"formusuario" : { 
-		"path" : "app/views/formusuario.php",
+	"formproduto" : { 
+		"path" : "app/views/formproduto.php",
 		"sessionKey": [{"idUsuario": false}], 
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
 	},
-	"formproduto" : { 
-		"path" : "app/views/formproduto.php",
+	"formpedido" : { 
+		"path" : "app/views/formpedido.php",
 		"sessionKey": [{"idUsuario": false}], 
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
@@ -61,12 +115,6 @@
 	},
 	"formmensagem" : { 
 		"path" : "app/views/formmensagem.php",
-		"sessionKey": [{"idUsuario": false}], 
-		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
-		"errorPath" : "app/views/public_home.php"
-	},
-	"cadastrar" : { 
-		"path" : "app/views/cadastrar.php",
 		"sessionKey": [{"idUsuario": false}], 
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
@@ -88,5 +136,98 @@
 		"sessionKey": [{"idUsuario": false}], 
 		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
 		"errorPath" : "app/views/public_home.php"
+	},
+	"brigadeiro" : { 
+		"path" : "app/views/brigadeiro.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"formusuario" : { 
+		"path" : "app/views/formusuario.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"listAllUsuario" : { 
+		"path" : "app/controllers/CtrlUsuario.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"usuarios/add" : { 
+		"path" : "app/controllers/CtrlUsuario.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"feedbacks/add" : { 
+		"path" : "app/controllers/CtrlFeedback.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"mensagens/add" : { 
+		"path" : "app/controllers/CtrlMensagem.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"produtos/add" : { 
+		"path" : "app/controllers/CtrlProduto.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"bolodecorado/add" : { 
+		"path" : "app/controllers/CtrlBolodecorado.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"pedidos/add" : { 
+		"path" : "app/controllers/CtrlPedido.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"cones/add" : { 
+		"path" : "app/controllers/CtrlCone.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"bolodepotes/add" : { 
+		"path" : "app/controllers/CtrlBolodepote.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"brigadeiros/add" : { 
+		"path" : "app/controllers/CtrlBrigadeiro.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"usuario" : { 
+		"path" : "app/controllers/CtrlUsuario.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
 	}
+		,
+	"adm" : { 
+		"path" : "app/views/adm.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	},
+	"logout" : { 
+		"path" : "app/views/logout.php",
+		"sessionKey": [{"idUsuario": false}], 
+		"sanitize"  : {"requestVars" : true, "code" : true, "sql" : true},
+		"errorPath" : "app/views/public_home.php"
+	}
+	
+	
 }

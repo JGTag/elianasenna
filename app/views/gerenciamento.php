@@ -2,79 +2,51 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="scripts.js"></script>
+<link rel="stylesheet" href="public/assets/css/style.css">
+<script src="https://unpkg.com/feather-icons"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliana Senna - Bolos & Doces</title>
+    
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="icon" href="public/assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <script>
   $("#lnkusuarios").click(function(event) {
     event.preventDefault();
-    $('#inicial').load("FormUsuario");
+    $('#gerenciamento').load("formusuario");
   });
 
   $("#lnkproduto").click(function(event) {
     event.preventDefault();
-    $('#inicial').load("FormProduto");
+    $('#gerenciamento').load("formproduto");
   });
 
   $("#lnkmensagem").click(function(event) {
     event.preventDefault();
-    $('#inicial').load("FormMensagem");
+    $('#gerenciamento').load("formmensagem");
   });
 
   $("#lnkfeedback").click(function(event) {
     event.preventDefault();
-    $('#inicial').load("FormFeedback");
+    $('#gerenciamento').load("formfeedback");
+  });
+    $("#lnkpedido").click(function(event) {
+    event.preventDefault();
+    $('#gerenciamento').load("formpedido");
   });
 </script>
+
+
 <style>
-  .areagere {
-    text-align: center;
-    padding:  0px 30px;
-  }
-
-  .areagere img {
-    width: 4%;
-  }
-
-  .cartao_geren {
-    width: 50%;
-    height: auto;
-    margin: 30px;
-    border: 5px solid #A63737;
-    border-radius: 30px;
-    padding: 25px;
-  }
-
-  .cartao_geren img {
-    width: 20%;
-  }
-
-  .cartao_geren h2 {
-    font-weight: bold;
-  }
-  .cartao_geren p{
-    font-size: 1.1rem;
-  }
-
-  .cartaogeren-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .info_geren {
-    width: 40%;
-  }
-
   .info_geren a {
     display: block;
     width: 70%;
-    cursor: context-menu;
+    cursor: pointer;
     margin: 10px auto;
   }
 
@@ -98,90 +70,111 @@
     outline: none;
     opacity: 0.8;
   }
+  
 </style>
 
 <body>
-  <section class="centralizacao areagere">
-    <h1>Área de gerenciamento <img src="img/gerenciamento.png" class="img-fluid"></h1>
-    <hr>
-    <div class="row ms-5 me-5 mt-5">
-      <article class="cartao_geren col">
+	<main class="container centralizacao areagere">
+	<div class="px-2 mb-5">
+		<h1>
+			Área de gerenciamento <img
+				src="public/assets/images/gerenciamento.png" class="img-fluid">
+		</h1>
+		<hr>
+		<div class="row justify-content-center mt-5">
+			<div class="col-sm-5 cartao_geren mx-3">
+				<div class="info_geren">
+					<h2>
+						Gerenciar Usuários
+					</h2>
+					<a data="formusuario" id="lnkusuarios" href="#">Gerenciar</a>
+				</div>
 
-        <div class="cartaogeren-item">
+				<div>
+					<p>Atenção, o formulário a seguir afeta diretamente o banco de
+						dados deste site, devido aos conflitos que possam gerar no mau
+						gerenciamento desses dados, tome cuidado ao adicionar uma
+						informação</p>
+				</div>
+			</div>
+			<div class="col-sm-5  cartao_geren mx-3">
+				<div class="info_geren">
+					<h2>
+						Gerenciar Produto
+					</h2>
+					<a data="formproduto" id="lnkproduto" href="#">Gerenciar</a>
+				</div>
 
-          <div class="info_geren">
-            <h2>Gerenciar <br> Usuários</h2>
-            <a data="formusuario" id="lnkusuarios" href="#">Gerenciar</a>
-          </div>
+				<div>
+					<p>Atenção, o formulário a seguir afeta diretamente o banco de
+						dados deste site, devido aos conflitos que possam gerar no mau
+						gerenciamento desses dados, tome cuidado ao adicionar uma
+						informação</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-sm-5  cartao_geren mx-3">
+				<div class="info_geren">
+					<h2>
+						Gerenciar Mensagem
+					</h2>
+					<a data="formmensagem" id="lnkmensagem" href="#">Gerenciar</a>
+				</div>
 
-          <div class="info_geren">
-            <p>Atenção, o formulário a seguir afeta diretamente o banco de dados deste site, devido aos conflitos que possam gerar no mau gerenciamento desses dados, tome cuidado ao adicionar uma informação</p>
-          </div>
+				<div>
+					<p>Atenção, o formulário a seguir afeta diretamente o banco de
+						dados deste site, devido aos conflitos que possam gerar no mau
+						gerenciamento desses dados, tome cuidado ao adicionar uma
+						informação</p>
+				</div>
+			</div>
+			<div class="col-sm-5  cartao_geren mx-3">
+				<div class="info_geren">
+					<h2>
+						Gerenciar Feedback
+					</h2>
+					<a data="formfeedback" id="lnkfeedback" href="#">Gerenciar</a>
+				</div>
 
-        </div>
+				<div>
+					<p>Atenção, o formulário a seguir afeta diretamente o banco de
+						dados deste site, devido aos conflitos que possam gerar no mau
+						gerenciamento desses dados, tome cuidado ao adicionar uma
+						informação</p>
+				</div>
+			</div>
+		</div>
+				<div class="row justify-content-center mt-4">
+			<div class="col-sm-5  cartao_geren mx-3">
+				<div class="info_geren">
+					<h2>
+						Gerenciar Pedido
+					</h2>
+					<a data="formpedido" id="lnkpedido" href="#">Gerenciar</a>
+				</div>
 
-      </article>
+				<div>
+					<p>Atenção, o formulário a seguir afeta diretamente o banco de
+						dados deste site, devido aos conflitos que possam gerar no mau
+						gerenciamento desses dados, tome cuidado ao adicionar uma
+						informação</p>
+				</div>
+			</div>
 
-      <article class="cartao_geren col">
-
-        <div class="cartaogeren-item">
-
-          <div class="info_geren">
-            <h2>Gerenciar <br> Produto</h2>
-            <a data="formproduto" id="lnkproduto" href="#">Gerenciar</a>
-          </div>
-
-          <div class="info_geren">
-            <p>Atenção, o formulário a seguir afeta diretamente o banco de dados deste site, devido aos conflitos que possam gerar no mau gerenciamento desses dados, tome cuidado ao adicionar uma informação</p>
-          </div>
-
-        </div>
-
-      </article>
-    </div>
-
-    <div class="row ms-5 me-5 mb-5">
-      <article class="cartao_geren col">
-
-        <div class="cartaogeren-item">
-
-          <div class="info_geren">
-            <h2>Gerenciar <br> Mensagem</h2>
-            <a data="formmensagem" id="lnkmensagem" href="#">Gerenciar</a>
-          </div>
-
-          <div class="info_geren">
-            <p>Atenção, o formulário a seguir afeta diretamente o banco de dados deste site, devido aos conflitos que possam gerar no mau gerenciamento desses dados, tome cuidado ao adicionar uma informação</p>
-          </div>
-
-        </div>
-
-      </article>
-
-      <article class="cartao_geren col">
-
-        <div class="cartaogeren-item">
-
-          <div class="info_geren">
-            <h2>Gerenciar <br> Feedback</h2>
-            <a data="formfeedback" id="lnkfeedback" href="#">Gerenciar</a>
-          </div>
-
-          <div class="info_geren">
-            <p>Atenção, o formulário a seguir afeta diretamente o banco de dados deste site, devido aos conflitos que possam gerar no mau gerenciamento desses dados, tome cuidado ao adicionar uma informação</p>
-          </div>
-
-        </div>
-
-      </article>
-    </div>
-
-  </section>
-  <script>
+		</div>
+		</div>
+	</main>
+	<script>
     feather.replace()
   </script>
-
-
+	<script src="public/assets/js/scripts.js"></script>
+	<script type="text/javascript">
+	function logout() {
+            // Redireciona para o script PHP de logout
+            window.location.href = 'logout';
+        }
+	</script>
 </body>
 
 </html>

@@ -39,39 +39,33 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css
 					<input name='slide' type="radio" checked> 
 
 					<div class="slider-content">
-						<div class="slider-item"><img src="public/assets/images/bolocone9.jpg" class="img-fluid"></div>
+						<div class="slider-item"><img src="public/assets/images/brigadeiro.jpg" class="img-fluid"></div>
 
 					</div>
 				</section>
 			</article>
 			<article class="prod-item3">
-				<h3>
-					<u>CONE TRUFADO</u>
-				</h3>
-				<p>Cone de chocolate e recheios de leite Ninho, Nutella ou
-					Prestígio.</p>
-				<p>
-					<b>R$7,00/un</b>
-				</p>
-				<div id="linhahorizontal"></div>
-				<a href="https://wa.me/5511965899216"><h3>PEÇA AGORA POR WHATSAPP!</h3></a>
-			</article>
-		</section>
+            <h3><u>CENTRO DE DOCES</u></h3>
+                <p>Tipos: Brigadeiro, Bicho de pé, Beijinho, Cajuzinho, Brigadeiro de paçoca, Brigadeiro de ninho, Brigadeiro de Nutella e Ferreiro Rocher.</p>
+                <p><b>R$100,00</b></p>
+                <div id="linhahorizontal"></div>
+                <a href="https://wa.me/5511965899216"><h3>PEÇA AGORA POR WHATSAPP!</h3></a>
+            </article>
+        </section>
 
 		<section class="prod-conteiner">
 			<article class="prod-item areaform">
 				<H3>DEIXE UM COMENTÁRIO SOBRE O PRODUTO!</H3>
-				<form id="frmCone">
-					<input type="hidden" name="idCone" value="0">
+				<form id="frmBrigadeiro">
+					<input type="hidden" name="idBrigadeiro" value="0">
 					<div>
-						<label for="nomeUserCone" class="form-label">Nome:</label> <input
-							type="text" id="nomeUserCone" name="nomeUserCone"
-							placeholder="Ex: anonimo123" required>
+						<label for="nomeUserBrigadeiro" class="form-label">Nome:</label> <input
+							type="text" id="nomeUserBrigadeiro" name="nomeUserBrigadeiro" placeholder="Ex: anonimo123" required>
 					</div>
 					<div>
-						<label for="comentarioUserCone" class="form-label">Comentario:</label>
-						<input type="text" id="comentarioUserCone"
-							name="comentarioUserCone" placeholder="Ex: Gostei!" required>
+						<label for="comentarioUserBrigadeiro" class="form-label">Comentario:</label>
+						<input type="text" id="comentarioUserBrigadeiro" name="comentarioUserBrigadeiro" placeholder="Ex: Gostei!"
+							required>
 					</div>
 					<input type="hidden" name="action" value="insert">
 					<!--<textarea name="message" id="comentario" placeholder="Comentário"></textarea>-->
@@ -87,20 +81,20 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css
 				<H3>COMENTÁRIOS</H3>
 				<div class="comentarios">
                         <?php
-                        use models\Cone;
+                        use models\Brigadeiro;
 
                         function showTable()
                         {
-                            $cone = new Cone();
-                            $rows = $cone->listAll();
+                            $brigadeiro = new Brigadeiro();
+                            $rows = $brigadeiro->listAll();
 
                             foreach ($rows as $row) {
 
                                 echo "
                                     <div class='feedback'>
                                           <div class='profile'></div>
-                                          <p class='profile-user'><input type='text'  id='nomeUserCone' name='nomeUserCone' value='" . $row['nomeUserCone'] . "' readonly ></p>
-                                          <input type='text'  id='comentarioUserCone' name='comentarioUserCone'  value='" . $row['comentarioUserCone'] . "'  readonly>
+                                          <p class='profile-user'><input type='text'  id='nomeUserBrigadeiro' name='nomeUserBrigadeiro' value='" . $row['nomeUserBrigadeiro'] . "' readonly ></p>
+                                          <input type='text'  id='comentarioUserBrigadeiro' name='comentarioUserBrigadeiro'  value='" . $row['comentarioUserBrigadeiro'] . "'  readonly>
                                     </div>";
                             }
                         }
@@ -120,24 +114,24 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css
 	<script type="text/javascript">
 	
 		$(document).ready(function() {
-	    $("#frmCone").submit(function(event) {
+	    $("#frmBrigadeiro").submit(function(event) {
 	        event.preventDefault();
-	        var dados = $("#frmCone").serialize();
+	        var dados = $("#frmBrigadeiro").serialize();
 	        console.log(dados);
-	        var url = "cones/add";
+	        var url = "brigadeiros/add";
 	        $.post(url, dados, function(dataResponse) {
 	            if (dataResponse.saved === true) {
 	                //alert("Dado Cadastrado com Sucesso!");
-	     			Swal.fire({
+					Swal.fire({
   						title: "Comentário adicionado!",
   						confirmButtonColor: '#A64141',
   						icon: "success"
 					});
-	               	const frmCone = document.querySelector('#frmCone');
-					frmCone.reset();
+	               	const frmBrigadeiro = document.querySelector('#frmBrigadeiro');
+					frmBrigadeiro.reset();
 	            } else {
 	                //alert("Não Cadastrado! Inclua todos os Dados!");
-	           Swal.fire({
+	            Swal.fire({
   						title: "Comentário não foi adicionado!",
   						confirmButtonColor: '#A64141',
   						icon: "error"

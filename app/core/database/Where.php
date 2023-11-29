@@ -37,12 +37,12 @@ class Where {
      *
      */
     public function addCondition($logicOperator, $fieldName, $operator, $value) {
-        // $value = (new Sanitize(false, false, true))->toClean($value);
+        $value = (new Sanitize(false, false, true))->toClean($value);
         $this->conditions[] = array(
             "logicOperator" => $logicOperator,
             "fieldName" => $fieldName,
             "operator" => $operator,
-            "value" => $value
+            "value" => $value 
         );
     }
     
@@ -55,7 +55,7 @@ class Where {
      *
      */
     public function addLike($logicOperator, $fieldName, $value) {
-        $value = (new Sanitize())->toClean($value);
+        $value = (new Sanitize(false, false, true))->toClean($value);
         $this->conditions[] = array(
             "logicOperator" => $logicOperator,
             "operator" => "LIKE",
@@ -73,7 +73,7 @@ class Where {
      *
      */
     public function addNotLike($logicOperator, $fieldName, $value) {
-        $value = (new Sanitize())->toClean($value);
+        $value = (new Sanitize(false, false, true))->toClean($value);
         $this->conditions[] = array(
             "logicOperator" => $logicOperator,
             "operator" => "NOT LIKE",
@@ -91,7 +91,7 @@ class Where {
      *
      */
     public function addIn($logicOperator, $fieldName, $values) {
-        $values = (new Sanitize())->toClean($values);
+        $values = (new Sanitize(false, false, true))->toClean($values);
         $this->conditions[] = array(
             "logicOperator" => $logicOperator,
             "operator" => "IN",
@@ -148,8 +148,8 @@ class Where {
      * @param mixed $max O valor máximo a ser comparado na condição.
      */
     public function addNotBetween($logicOperator, $fieldName, $min, $max) {
-        $min = (new Sanitize())->toClean($min);
-        $max = (new Sanitize())->toClean($max);
+        $min = (new Sanitize(false, false, true))->toClean($min);
+        $max = (new Sanitize(false, false, true))->toClean($max);
         $this->conditions[] = array(
             "logicOperator" => $logicOperator,
             "operator" => "NOT BETWEEN",
